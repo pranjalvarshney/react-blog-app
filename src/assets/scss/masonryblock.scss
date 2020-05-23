@@ -1,0 +1,15 @@
+.masonryblock{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 900px){
+    .masonryblock{
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;      
+    }
+}

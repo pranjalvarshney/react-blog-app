@@ -1,0 +1,10 @@
+@import './variables.scss';
+@import './navigation.scss';
+@import './home.scss';
+@import './masonryblock.scss';
+@import './block.scss';
+
+body{
+    background-color: $background-color;
+    margin: 0;
+}

@@ -1,0 +1,103 @@
+#main-navigation{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background-color: #000;
+    color: $text-color;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    
+    #menu-title{
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    #menu-container{
+        ul{
+            align-items: center;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+            list-style: none;
+            height: 100%;
+            display: flex;
+        
+            a{
+                text-decoration: none;
+                padding: 0 12px;
+                color: grey;
+    
+                &:hover{
+                    color: $text-color;
+                }
+    
+            }
+        }
+    
+       
+    }
+    #menu-btn{
+        align-items: center;
+        cursor: pointer;
+        font-size: 36px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #main-navigation{
+        #menu-container{
+            
+            float: left;
+            width: 300px;
+            height: calc(100% - 70px);
+            position: absolute;
+            top: 70px;
+            left: -300px;
+            background: blanchedalmond;
+            transition: 500ms ease left;
+            
+            
+            ul{ 
+                justify-content: flex-start;
+                float: left;
+                flex-direction: column;
+                padding: 30px 20px;
+                li{
+                    float: left;
+                    width: 100%;
+                    padding: 15px 0px ;
+                    float: left;
+
+                    a{
+                        text-align: center;
+                        
+                        
+                    &:hover{
+                        color: #000 !important;
+                    }
+                    }
+                }
+
+            }
+
+            &.active{
+                left: 0px;
+            }
+
+        }
+
+        #menu-btn{
+            display: flex;
+            transition: 500ms;
+            &.active{
+                transform: rotate(90deg);
+                transition: 500ms ease-in-out;
+            }
+        }
+
+    }
+}
